@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Aplicacion que simula el envio de giros y entrega un recibo
+-->
+<!--POST enviar información desde el cliente para que sea procesada y actualice o agregue al servidor-->
+    <head>
+        <title>Aplicación para enviar giros(index.html)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- para relacionar la hoja de estilo (cascading style sheets)llamada Giros.css -->   
+    <link rel="stylesheet" type="text/css"href="EstilosAppGiros1/GirosPost.css">           
+    </head>
+    
+    <body>
+    <center>
+        <h1>Giro Express</h1>
+    </center>
+    <form method="POST" action="giroControlador.jsp">
+            
+    <label>Nombre:</label><input required="" id="nombre" name="nombre" placeholder="tu nombre"/>
+        
+    <label>Destinatario/a:</label><input required="" id="nombreDestinatario" name="nombreDestinatario" placeholder="nombre del destinatario"/> 
+       
+    <label>Monto:</label><input required="" id="monto" name="monto" placeholder="monto a enviar"/>
+        
+    <label>País:</label><select name ="lugarDestino">
+        <option value ="Chile">Chile</option>           
+        <option value ="Argentina">Argentina</option>
+        <option value ="Perú">Perú</option>
+        <option value= "Bolivia" >Bolivia</option>
+                       </select>
+       
+  <label>Cambio:</label>
+  <input type="radio" name="tipoCambio" value="dolar"checked="checked"/>Dolar
+  <input type="radio" name="tipoCambio" value="euro"checked="checked"/>Euro
+      
+<input type="Submit" value="Enviar" style="width:100px; height: 30px;background-color: #4682B4" ></input>
+
+<input type= "Reset" style="width:100px; height: 30px;background-color: #4682b4" value= "Resetear"> </input>
+                 
+     </form>  
+    </body>
